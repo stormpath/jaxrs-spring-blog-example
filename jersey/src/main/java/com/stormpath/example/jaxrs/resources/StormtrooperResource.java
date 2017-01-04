@@ -15,7 +15,7 @@ import java.util.Collection;
 
 @Path("/troopers")
 @Produces("application/json")
-public class StormtroooperResource {
+public class StormtrooperResource {
 
     @Inject
     private StormtrooperDao trooperDao;
