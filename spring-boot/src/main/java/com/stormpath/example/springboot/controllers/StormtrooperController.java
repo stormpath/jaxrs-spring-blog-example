@@ -17,8 +17,12 @@ import java.util.Collection;
 @RequestMapping(path = "/troopers")
 public class StormtrooperController {
 
+    private final StormtrooperDao trooperDao;
+
     @Autowired
-    private StormtrooperDao trooperDao;
+    public StormtrooperController(StormtrooperDao trooperDao) {
+        this.trooperDao = trooperDao;
+    }
 
     @RequestMapping(method = RequestMethod.GET)
     public Collection<Stormtrooper> listTroopers() {

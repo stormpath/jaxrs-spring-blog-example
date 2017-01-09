@@ -17,8 +17,12 @@ import java.util.Collection;
 @Produces("application/json")
 public class StormtrooperResource {
 
+    private final StormtrooperDao trooperDao;
+
     @Inject
-    private StormtrooperDao trooperDao;
+    public StormtrooperResource(StormtrooperDao trooperDao) {
+        this.trooperDao = trooperDao;
+    }
 
     @GET
     public Collection<Stormtrooper> listTroopers() {
