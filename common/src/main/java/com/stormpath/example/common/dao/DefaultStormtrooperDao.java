@@ -66,6 +66,7 @@ public final class DefaultStormtrooperDao implements StormtrooperDao {
     @Override
     public Stormtrooper updateStormtrooper(String id, Stormtrooper stormtrooper) {
         // we are just backing with a map, so just call add.
+        // NOTE: this does NOT cover all use-cases, null objects, id change, etc.
         return addStormtrooper(stormtrooper);
     }
 
